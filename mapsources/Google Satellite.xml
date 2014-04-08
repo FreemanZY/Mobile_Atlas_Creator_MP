@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customMapSource>
+    <name>Google Satellite Map</name>
+    <minZoom>0</minZoom>
+    <maxZoom>20</maxZoom>
+    <tileType>PNG</tileType>
+    <tileUpdate>None</tileUpdate>
+    <url><![CDATA[http://mt{$serverpart}.google.com/vt/lyrs=s@125&src=app&x={$x}&y={$y}&z={$z}&s=Galileo]]></url>
+    <serverParts>0 1 2 3</serverParts>
+</customMapSource>

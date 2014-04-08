@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<customMapSource>
+    <name>Nokia 道路地图</name>
+    <minZoom>0</minZoom>
+    <maxZoom>20</maxZoom> 
+    <tileType>PNG</tileType> 
+    <tileUpdate>IfNoneMatch</tileUpdate> 
+<url><![CDATA[http://{$serverpart}.maps.nlp.nokia.com.cn/maptile/2.1/maptile/9dd9da0a11/normal.day/{$z}/{$x}/{$y}/256/png8?lg=CHI&token=...]]></url>
+    <serverParts>1 2 3 4</serverParts>
+</customMapSource>

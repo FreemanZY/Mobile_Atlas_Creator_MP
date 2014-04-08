@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?> 
+<customMapSource>
+    <name>Google 混合地图</name>
+    <minZoom>0</minZoom>
+    <maxZoom>20</maxZoom> 
+    <tileType>PNG</tileType> 
+    <tileUpdate>None</tileUpdate> 
+    <url><![CDATA[http://mt{$serverpart}.google.cn/vt/lyrs=s@131,h@209000000&hl=zh-CN&gl=CN&src=app&x={$x}&y={$y}&z={$z}&s=Galileo]]></url>
+    <serverParts>0 1 2 3</serverParts>
+</customMapSource>

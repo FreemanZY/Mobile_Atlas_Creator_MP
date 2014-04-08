@@ -1,0 +1,90 @@
+static import java.lang.Math.*;
+//USGS lv 1 ~ lv 19
+String getTileUrl( int zoom, int x, int y ) 
+{
+    if(zoom <= 15)
+    {
+        return "http://basemap.nationalmap.gov/ArcGIS/rest/services/USGSTopo/MapServer/tile/"+zoom+"/"+y+"/"+x;
+    }
+    else
+    {
+    //http://services.nationalmap.gov/ArcGIS/rest/services/USGSTopoLarge/MapServer/export?dpi=96&transparent=true&format=png8&bbox=-8615045.170809733%2C4703692.355793918%2C-8614159.274864303%2C4704097.499833373&bboxSR=102100&imageSR=102100&size=1242%2C568&f=image
+    //http://services.nationalmap.gov/ArcGIS/rest/services/USGSTopoLarge/MapServer/export?dpi=96&transparent=true&format=png8&bbox=-8614610.640059404%2C4703395.46715729%2C-8613769.723408304%2C4703780.040955861&bboxSR=102100&imageSR=102100&size=1242%2C568&f=image
+        return "http://services.nationalmap.gov/ArcGIS/rest/services/USGSTopoLarge/MapServer/export?dpi=96&transparent=true&format=png8&bbox="
+        + mercatorTileEdges(x,y,zoom) + 
+        "&bboxSR=102100&imageSR=102100&size=256%2C256&f=image";
+    }
+}  
+
+numTiles(z){
+    return abs(pow(2,z));
+}
+
+mercatorToLat(mercatorY){
+  return(toDegrees(atan(sinh(mercatorY))));
+}
+
+latEdges1(y,z){
+  n = numTiles(z);
+  unit = 1 / n;
+  relY1 = y * unit;
+  lat1 = mercatorToLat(PI * (1 - 2 * relY1));
+  return lat1;
+}
+
+latEdges2(y,z){
+  n = numTiles(z);
+  unit = 1 / n;
+  relY1 = y * unit;
+  relY2 = relY1 + unit;
+  lat2 = mercatorToLat(PI * (1 - 2 * relY2));
+  return lat2;
+}
+
+lonEdges1(x,z){
+  n = numTiles(z);
+  unit = 360 / n;
+  lon1 = -180 + x * unit;
+  return lon1;
+}
+
+lonEdges2(x,z){
+  n = numTiles(z);
+  unit = 360 / n;
+  lon1 = -180 + x * unit;
+  lon2 = lon1 + unit;
+  return lon2;
+}
+
+tileEdges(x,y,z){
+  return (latEdges2(y,z) + "," +
+   	  lonEdges1(x,z) + "," +
+	  latEdges1(y,z) + "," +
+	  lonEdges2(x,z));
+}
+
+lon2mercator(l){
+  return (l * 20037508.34 / 180);
+}
+
+lat2mercator(l){
+ r = toRadians(l);
+ lat = log((1+sin(r)) / (1-sin(r)));
+ return (lat * 20037508.34 / 2 / PI);
+}
+
+mercatorTileEdges(x,y,z){
+  return (lon2mercator(lonEdges1(x,z)) + "," +
+             lat2mercator(latEdges2(y,z)) + "," +
+             lon2mercator(lonEdges2(x,z)) + "," +
+             lat2mercator(latEdges1(y,z)));
+}
+
+
+tileType = "png"; // required - image format "png" "jpg" or "gif"
+name = "USGS TOPO - Full";
+tileSize = 256; // optional
+minZoom = 0;    // optional
+maxZoom = 18;   // optional
+tileUpdate = TileUpdate.None; // TileUpdate.IfNoneMatch, TileUpdate.ETag, TileUpdate.IfModifiedSince, TileUpdate.LastModified, TileUpdate.None 
+//backgroundColor = "#E5E3DF"; // optional - supported since MOBAC 1.9.1

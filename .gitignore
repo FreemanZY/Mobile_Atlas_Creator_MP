@@ -1,0 +1,10 @@
+# Atlases #
+###################
+*.sqlitedb
+*.lck
+
+# tilestore #
+###################
+*.jdb
+*.lck
+lock

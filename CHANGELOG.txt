@@ -1,0 +1,604 @@
+﻿*******************************************************************************
+*                 M O B I L E   A T L A S   C R E A T O R                     * 
+*******************************************************************************
+*                  V E R S I O N   I N F O R M A T I O N                      *
+*******************************************************************************
+ 
+ + = Additions since previous version
+ ! = Bug fixes since previous version
+ ~ = Changes   since previous version
+ - = Features that has been removed
+
+1.9.11.7 MP (2013-03-19)
++ add command-line support for auto quit (-q) when create profile_name is used.
+
+1.9.11.6 MP (2013-03-19)
++ add JPEG compression level of 10%, 20%, 30%, 40%.
+
+1.9.11.5 MP (2013-03-19)
+! Update some Traditional Chinese translations.
+
+1.9.11.4 MP (2013-03-19)
+! Bug fix of Null Pointer Exception. 
+
+1.9.11.3 MP (2013-03-18)
+~ localImageFile support using <retinaDisplay>
+~ More atlas format support retina (scale = 2) images, including Paper(PNG), Paper(pdf). 
+! More atlas format can display retina (scale = 2) images correctly (convert to scale = 1), such as iPhone v5  
+
+1.9.11.2 MP (2013-03-16)
++ Add <localImageFile> map source support
+
+1.9.11.1 MP (2013-03-11)
+! Bug fix of 512x512 map tile images in Multiple layer
+
+1.9.11 MP (2013-02-27)
++ Multiple language for Simplify-Chinese, Traditional Chinese and English
++ View 512x512 map tile images for retina display 
+
+1.9.11 (2013-02-19)
+ ! Bugfix for servers that send case insensitive content-types
+ ! Bugfix OruxMapsSQlite final commit was missing (patch #30)
+ + New map sources: USGS National Map Base/Satellite/Satellite+/Vector/Topo
+ ! Bugfix Garmin Custom Map: Removed possibility to set output format to PNG  
+
+1.9.10 (2012-12-04)
+ ! Bugfix Local tile [zip] files in quadkey format causes a 
+    NullPointerException when creating an atlas (#229)
+ + Custom multi-layer map source can now contain <customWmsMapSource> maps  
+
+1.9.9 (2012-10-09)
+ ! Bugfix in PNGW calibration (patch by allib)
+ ! RMAPS: Error "failed to retrieve max tile zoom info" fixed (#3561323)
+ ! GEMF: Error "NullPointerException" fixed (#3564146)
+ ~ OruxMaps: Patch #3300055 applied
+ + Custom XML map: <invertYCoordinate> now works in simple XML map, too 
+ + Loading multiple GPX files at once into MOBAC (based on patch by heckie) 
+ ! Bugfix NullPointerException when aborting atlas download fixed (#3568849)
+ + Automatically splitted maps because of the specified maximum map size can 
+    now overlap 1-5 tiles 
+
+1.9.8 (2012-07-05)
+ ! Viewranger atlas format depends on Java Advanced Imaging without checking
+ ! OurxMaps SQLite: Memory handling changed (should prevent OutOfMemoryError)
+ ! Fixed progress bar in atlas progress window for large atlases 
+ + Possibility added to use SQLite Java Wrapper (ch-werner) instead of default 
+    sqlite library 
+ ~ Replaced the old SQLite library with recent version of Xerial. This fixes 
+    all problems creating databases larger than 2GB on Windows 64bit
+ ! CacheWolf: Custom tile processing re-enabled
+ + New atlas format: iPhone 3 Map Tiles v5
+
+1.9.7 (2012-05-16)
+ + Custom XML map source: New parameter {$q} for Quad-Tree encoded zoom, x & y
+ + New atlas output format: Osmdroid GEMF
+ + Increased default map size to 65536
+
+1.9.6 (2012-04-02)
+ + New settings.xml option: <garminCustomMaxMapCount>
+ + New atlas format: TomTom raster
+ - Map source removed: Openstreetmap Osmarenderer (project has been retired)
+ ! Paper atlas: Disabling compass in settings was ineffective 
+ + New map source: OpenStreetMap 4uMaps.eu (Europe)
+ + backgroundColor option for customMultiLayerMapSource
+ ! Message "The JPEG image format is not supported by OpenJDK." was shown at
+    start-up even is custom tiles processing was disabled
+ + New atlas format: Viewranger
+ ~ Magellan (RMP): Removed 18000 pixel check
+
+1.9.5 (2012-03-09)
+ ! Alpine Quest Map: Multiple bugs fixed (#3484328)
+ ~ Improvements in atlas download progress dialog (patch by dvodvo)
+ ~ Windows launcher "Mobile Atlas Creator.exe" increased max heap size to 1GB
+ ~ Linux start.sh increased max heap size to 1GB
+ + New selection mode: Circle (approximated by a 16 point polygon)
+ + New map source: OSMapa-Topo with contours (PL)
+
+1.9.4 (2012-01-29)
+ + BeanShell map source: ignoreError=true feature added
+ + Debug menu: Show/hide map tile borders
+
+1.9.3 (2011-12-01)
+ + Custom map source from local tiles XML schema changed: 
+    new <sourceType> values: DIR_ZOOM_X_Y, DIR_ZOOM_Y_X, QUADKEY
+    removed flipXYDirs (use <sourceType>DIR_ZOOM_Y_X</sourceType> instead
+ ! Custom map source from ZIPs: Handling for atlas types with two file 
+    extensions fixed
+ ! Bugfix Osmdroid SQlite: PRIMARY KEY must be unique (#3438206)
+ ~ Turaterkep map updated (renamed internally to Turaterkep256 because of map 
+    format change)
+ + Support added for starting external tools from within MOBAC 
+
+1.9.2 (2011-10-12)
+ + Custom map source from ZIP/files in file-system: added possibility to invert
+   y coordinate via "invertYCoordinate" like it is used by MapTiler
+ + New settings.xml option: <downloadRetryCount> (default 1). Allows to reduce 
+    or increase the maximum attempts MOBAC tries to download a tile in case 
+    of errors occur while download or HTTP response is not as expected.
+ + Logging verboseness now configurable for the current session via GUI  
+ ! PaperAtlas: NullPointerException when WGS Grid=off has been fixed
+ + CustomSQLite atlas as map source: OSMAND format added
+ + New atlas output format: OSMAND SQLite
+
+1.9.1 (2011-09-09) 
+ ! Opening settings dialog: ClassCastException on Linux/OpenJDK
+ ! Custom SQlite atlas as map source fixed for atlas formats AndNav, 
+    BackCountry Navigator and Osmand 
+ + Background color for BeanShell map sources can be specified by adding
+    backgroundColor = "#ffffff"; 
+ ! Custom SQLite atlas as map source had an undefined tileImageType;
+    Added auto-detection and user defined <tileImageType> 
+
+1.9 (2011-08-18) 
+ ! Calculation problem in MGMaps atlas format (fix by Pierre-Luc Paour)
+ ! Custom mapsource from RMaps SQLite atlas shows wrong zoom levels 
+ - Removed map source: Open Cycle Map (request by Andy Allan)
+ + New map source: OSMapa-Topo (Poland)
+ + Map source tile store coverage: button for hiding colored layer added
+ + OziExplorer/Trekbuddy: MM1B calculation improved (patch by MrPete #3026830)
+ + Custom XML map source: {$serverpart} / <serverParts> implemented for 
+    balancing load among multiple servers with different DNS names
+ + SQLite library included in MOBAC distribution 
+
+1.9 beta 6 (2011-06-21)
+ + New atlas format: Geocaching Live offline maps
+ + New atlas format: MBTiles (Experimental)
+ + New atlas format: Paper Atlas (PDF) & Paper Atlas (PNG) 
+    [provided by Ľubomír Vasek] 
+ ! Bug #3316081 - "String index out of range: -1" upon map sources update 
+ ! Incorrect selection and tile count calculation 
+ + New map source: Moldova (point.md)
+
+1.9 beta 5 (2011-05-17)
+ + Added possibility change directory syntax for file and zip based map sources 
+    from zoom/x/y to zoom/y/x ("flipXYDir")
+ + Added possibility to use <localTileFiles> and <localTileZip> within a custom 
+    multi-layer map source
+ ! CustomMultiLayerMapSource: "null" error when loading
+ ! directories.ini: mobac.atlasprofilesdir not used for loading profiles list
+ + directories.ini: System variables can be used in the form ${VARNAME}
+ + Local map sources from SQLite atlases can now be used - supported formats are 
+    RMaps, MBTiles, BigPlanetTracks, Galileo, NaviComputer
+ ! Fixed OpenStreetMap Cycle Map
+ + Experimental: adding user-defined polygon maps
+ ~ Changed polygon selection behavior - selection stays now after adding it 
+ 
+1.9 beta 4 (2011-05-02)
+ ~ Problem loading tile image type for custom map sources (ends up for TrekBuddy 
+    atlas format in an NullPointerException like in bug #3290976
+ ~ Settings dialog now lists all tile stores - not only the stores of loaded map 
+    sources
+ + Experimental: Polygonal map derived from GPX track segment
+ ! Endless opening of exception dialog (endless recursion)
+
+1.9 beta 3 (2011-04-21)
+ + Map source UMP-pcPL reactivated
+ + [Nokia] Sports Tracker file extension changed to jpg (feature request #3066161)
+ + Reactivated atlas format "TwoNav (RMAP)"
+ + New map source: FAA Sectional Charts (aeromaps.us)
+ + Reactivated map sources Freemap.sk (Car atlas, Hiking map, Cycle map)
+ + Map source New Zealand Topographic Maps (nztopomaps.com) reactivated
+ ! OruxMapsSQLite: Last processed tiles missing in db file
+
+1.9 beta 2 (2011-04-06)
+ ! Custom atlas map source / locally generated tiles map source
+ + New map source for using tiles from zip file(s)
+ + Removed all map sources except the OSM related - for details see 
+    http://sourceforge.net/projects/mobac/forums/forum/861096/topic/4470412
+
+1.9 beta 1 (2011-03-29)
+ + New map source: OpenStreetMap MapQuest
+ + New map source: OpenStreetMap Bing layer (Mapnik powered by Microsoft)
+ ~ Maximum zoom level of OpenStreetMap Mapnik decreased to 16 (zoom levels 
+    17+ are blocked on server side because of high server stress for 
+    generating such tiles) 
+ + New custom map source type: reading tiles offline from an OSMTracker/AndNav/
+    BackCountry Navigator/Maverick/OSMAND atlas (from file system)
+ ~ Atlas format PNG+Worldfile: projection file for Arcgis added and calculation 
+    improved (patch by user mmartin2)
+ ~ JPEG compression level selectable for Magellan (RMP) atlas format
+
+1.9 preview 14 (2011-03-17)
+ + Osmdroid SQLite: Tile image format conversion implemented
+ - Osm Hiking maps removed (excluding the "Wanderreitkarte Abo" version)
+ - Outdooractive.com maps removed as requested by map provider
+
+1.9 preview 13 (2011-03-12)
+ + Download to tile store without creating an atlas:  
+    new atlas format "Tile store download only"
+ ! BeanShell map sources could not be used with certain atlas formats
+ + New map source: Israel Topo (Amudanan) with and without trails 
+
+1.9 preview 12 (2011-03-05)
+ ~ Cykloatlas: max zoom level extended to 16
+ + New map source: Canada Toporama  
+ + Convert an existing atlas profile to a different output format 
+ ! Loading of custom CloudMade maps fixed
+
+1.9 preview 11 (2011-03-02)
+ ! Error when using a BeanShell map source with certain atlas formats
+ - Removed Map+ map sources because of license problem with swisstopo
+
+1.9 preview 10 (2011-02-28)
+ ! Fixed map source: Docelu.pl
+ + Bookmarks can be added (saves map position and selected map source) 
+ ! Fixed map source: Cykloatlas and relief
+ ! Fixed map source: Map+ (Switzerland)
+ + New map source: Map+ Gelände (Switzerland)
+ + New atlas format: nfComPass
+
+1.9 preview 9 (2011-02-22)
+ + New map source: Reit- und Wanderkarte (Abo) - (requires purchased ticket)
+ ~ Updated New Zealand Topographic Maps url
+ ! OpenStreetMap attribution + MOBAC user aget
+
+1.9 preview 8 (2011-02-16)
+ + NaviComputer: Possible to change tile image format (PNG, 4Bit-PNG, JPEG, ...)
+ + OpenPisteMap: All three layers (base, contours and landshed are now supported)
+ - Disabled TwoNav RMAP output format because of legal/license problems  
+
+1.9 preview 7 (2011-02-04)
+ + OSM Hiking ticket system implemented (Wanderreitkarte.de)
+ ! NoSuchMethodError: mobac.program.ProgramInfo.getUserAgent()Ljava/lang/String;  
+
+1.9 preview 6 (2011-02-04)
+ ! Custom tile size was not available for TrekBuddy and Glopus GFM
+ ~ Tile usage policy implemented for OSM Mapnik
+
+1.9 preview 5 (2011-01-21)
+ + New map source: ICAO Maps (Germany)
+ + Manual map pack online update via settings dialog
+ + Add selection via Ctrl+A key combination possible (see "Maps" menu)    
+
+1.9 preview 4 (2011-01-14)
+ + New: Support for CustomWmsMapSource (experimental)
+ + Download bandwidth limitation selectable for very fast network connections
+ ! Highest zoom level missing in tile store coverage zoom selector
+ + New atlas format: OsmdroidSQlite  
+ + New map sources: ArcGIS topo map/satellite/street map   
+
+1.9 preview 3 (2011-01-09)
+ + New atlas format: PNG + Worldfile (PNG & PGW)
+ ~ Atlas output format has to be chosen before adding maps
+ ~ Disabling of unsupported tile processing options (regarding the current
+    atlas format)
+ ~ Enabled maps with ellipsoid projection for RMaps 
+
+1.9 preview 2 (2010-12-18)
+ + New atlas format: BackCountry Navigator
+ + New atlas format: TwoNav (RMAP)
+ + Multi-layer maps with more than two layers are now possible
+ + New map source: OSM Hiking with relief and base 
+ + New map source: Open Sea Map (sea layer joined with Mapnik) 
+ + New atlas format: MGMaps/MyTrails (MGM)
+ + New map source: Topomapper.com
+ ~ Map sources are now packed into "MapPacks" which can be updated 
+    without changing the main MOBAC program
+ ~ Custom map sources are moved from settings.xml into separate xml files
+    in the "mapsources" sub-directory
+ ~ XML structure of multi-layer custom maps sources has changed
+ + Multi-layer maps can now contain map sources that come with MOBAC
+    This allows to combine existing map sources with new overlays.
+ + BeanShell map sources can be used if placed in the "mapsources" 
+    sub-directory
+ + All direcories used by MOBAC can be pre-configured via file 
+    directories.ini in the MOBAC program directory
+ + CustomMap: new parameter: ignoreErrors and backGroundColor can have
+    alpha transparency parameter
+ + New map source: Cloudmade Map default style (1) 
+ + Tile image format conversion for RMaps/BigPlanet/Galileo
+ 
+ 1.8 final: (2010-10-31)
+ + New map source: New Zealand Topographic Maps
+
+ 1.8 RC 1: (2010-10-23)
+ + AlpineQuest handles tiles <> 256px and ellipsoid projections
+ + New atlas format: Run.GPS Atlas
+ ! Fixed map source: Emapi.pl
+
+ 1.8 beta 4: (2010-10-09)
+ ~ Implemented logging for ImageWriter warnings
+ ~ Display selected areas: adding a new map selection does no longer resets the 
+    map selection and therefore the highlighted area does not change. 
+
+ 1.8 beta 3: (2010-10-02)
+ ! Fixed: NullPointerException when renaming an GPX file entry
+ ! MyTopo URL updated and fixed
+ ~ Unnecessary restriction of RMaps / BigPlanet Tracks to zoom 17 removed
+ + New map source: Microsoft Maps with hill shade
+ ~ Custom tile settings now possible with SportsTracker
+ + New atlas format: Osmdroid ZIP
+ + New map source: SIGPAC Mercator (Spain only) - patch by susinho
+
+ 1.8 beta 2: (2010-09-13)
+ + AlpineQuestMap atlas creator updated (patch by Camille) 
+ + New map source: Navitel (Russian)
+ ! GPS Sport Tracker: space removed in tile file name
+ ! MyTopo URL updated 
+
+ 1.8 beta 1: (2010-08-24)
+ ! Fixed PNG 256 color output
+ + New atlas format: OruxMaps (Android)  
+ + New atlas format: Glopus Map File (AFTrack and others)
+ ~ BigPlanet SQL commit rate changed 
+ ! #2963490 Using custom tile size with multi-layer maps creates black map 
+    tiles
+ + GPX file editor improved
+ ~ Austrian Map removed (does not work anymore - unable to fix)
+ + Yandex Map & Sat added (works only with selected atlas creators because of a 
+    different projection category - Yandex uses an ellipsoid)
+ ~ Map source change: Emapi.pl replaces Emapa.pl
+ + New atlas format: PathAway
+ ! Alpha transparency problem with multi-layer maps        
+ + New atlas format: AFTrack (OSZ)
+ ~ CacheBox layer name uses now the map source name
+ + New atlas format: AlpineQuestMap (AQM)
+ + New atlas format: Ublox
+ ! Fixed OSM Hiking relief
+ + New map source: Cykloatlas with relief
+ + Custom Map Sources extended to multi-layer map source (2 layers)
+ + New map source: Statkart sea/nautical (AKA "sjo_hovedkart2")
+ ~ TouretechQV: Corrected "projparams" (removed unset UTM zone) - see #2970353
+ + New atlas format: Google Earth Overlay (unrestricted Google Custom Map) 
+ ! Fixed: #3008934 (MM1B calculation problem in .map file)
+ + New map source: MyTopo.com (USA only)
+ + New map source: Yahoo Maps Japan
+ + New atlas format: GPS Sports Tracker
+ + New atlas format: Sports Tracker
+ + New map source: OSM Hikebikemap.de
+ + Background color for custom maps added
+ ~ Freemap.sk maps updated and changed
+ + New atlas format: Maplorer
+ + New map source: Yahoo Taiwan
+ + New map sources: Aero Charts VFR/IFR/IFR-H (USA only from runwayfinder.com) 
+ + New atlas format: OruxMaps Sqlite
+ + New map source: Ordnance Survey Explorer Maps (UK)
+ + Proxy authentication by user name/password added in GUI  
+ + New atlas format: OSMAND
+ ~ SQLite back-end replaced - Zentus SqliteJDBC is now used 
+    (see README.HTM for details)
+ ! OpenPisteMap tile url updated
+ + New atlas format: NaviComputer
+
+ 1.7: (2010-02-05)
+ ~ Project has been renamed to "Mobile Atlas Creator" taking account that
+    besides TrekBuddy a large number of atlas and map formats are supported
+    and for ending the mix-up of "TrekBuddy" and "TrekBuddy Atlas Creator" 
+ ~ Tiles tore now uses database (BerkelyDB) instead of tile files in file 
+    system
+ + Old tiles saved in the tile store are checked and updated when used 
+    (displayed in map view or used in an atlas). Updating is done via 
+    expiration settings - those provided by the server or otherwise user 
+    specified.   
+ + Atlas output directory can be specified via settings dialog
+ + AndNav and OSMTracker: Tile format conversion (JPG <->PNG) implemented
+    including color reduction
+ ~ Docelu.pl can update it's base URL like the Google map sources do
+ ~ Pause/resume button now works while map creation (not only while download)
+ + New experimental map source: Turaterkep (Hungary hiking)
+    Uses tiles of size 512x512 (not supported by all atlas formats)        
+ + Multi-layer map sources such as Google Hybrid or OSM Hiking with relief 
+    background can be used with all atlas creators
+ + New map: NearMap Australia (high-resolution aerial images for Australia)
+ ! GPX addWpt: Multiple way points added by one mouse click fixed
+ ! Start.sh/Start.cmd Java max heap setting was ignored by Java because of 
+    the position at the end of the command line   
+ ! #2904937 and #2905182 1px map calibration bug
+ + New map source: Humbermedia Bavaria 
+ + New atlas format: Mobile Trail Explorer Cache (writes single MTECache file
+    per atlas)
+ + New map sources: (Norway) Statkart Topo2, Toporaster2 (limited to 10.000
+    tiles per day and IP)
+ + Drag & Drop for maps in "Atlas content" tree 
+ + New atlas format: Magellan RMP / VantagePoint
+ + New atlas format: Touratech QV
+ ! Fixed #2913874: ArrayIndexOutOfBoundsException in PNG 4-bit writer 
+ + New map source: Eniro.com map/aerial/nautical (Sweden, Norway, Finland)
+ + Checkbox added in atlas progress dialog for ignoring all download errors  
+ + New atlas format: CacheWolf (as one large 24bit png + WFL or tiled with 
+    multiple WLF files using the configured image format and tile size)
+ + New map source: Mapplus.ch (Switzerland)
+ + Coordinate format changeable ("deg" / "deg,min" / "deg,min,sec")
+ + New atlas format: CacheBox
+ + New atlas format: Garmin Custom Map
+     Image downscaling uses bilinear filter (improves image quality) 
+ + Each map source has now a background color (usually black) that is used 
+    in case of missing tiles
+ + Content-type check after download (HTTP header and image data header)
+ + New map source: Ovi/Nokia Maps
+ + New map source: Bergfex (Austria)
+ ! Grid paint juddering on high zoom levels fixed
+ ~ OpenStreetMap Hiking updated
+ 
+ 1.6.1: (2009-10-30)
+ ! Loading and saving of GPX failed
+ 
+ 1.6: (2009-10-27)
+ + Loading & saving of GPX 1.1 files (way- track- and routepoints are displayed
+    as overlay) 
+ + GPX 1.0 files are automatically transformed to GPX 1.1 file on load 
+ + Route and tracks are painted as connected line   
+ + Add new way points to a GPX file (properties: lat, lon, name)   
+ + Map scale bar added (metric/imperial selectable)
+ + New atlas format: Mobile Trail Explorer (MTE)
+ + New atlas format: RMaps / BigPlanet SQLite (Android applications, requires 
+    additional SQLite libraries) 
+ + New atlas format: OSMTracker 
+ + New map source: OpenStreetMap Public Transport (öpnvkarte.de)
+ + New map source: AustrianMap (z14 & z15 of www.austrianmap.at) 
+    [provided by Guenther Hoelzl]
+ + New map sources: Freemap Slovakia (normal, hiking & hiking plus hill shade)
+ + New map sources: Google Maps Korea
+ + New map sources: Open Piste Map (openpistemap.org)
+ + New atlas format: Maverick (Android application)
+ + New map sources: Emapa.pl (Poland)
+ + New atlas format: Glopus (PNG & KAL)
+ + New map sources: Outdooractive.com Austria and South Tyrol
+
+ ~ Max zoom level of Google Maps increased from 17 to 19
+ ~ Behavior on adding new maps and layers changed: the number of layers has 
+    been reduced to a minimum making it easier switch between different zoom 
+    levels when using TrekBuddy
+
+ ! Extreme performance break-in in grid-mode fixed
+ ! Map selections do no longer unwanted enlarge itself in grid mode beyond the 
+    selected grid
+ 
+ 1.5: (2009-08-01)
+ + Flexible atlases containing different areas of multiple map sources are possible
+ + New atlas output format: AndNav - Android Navigation System http://www.andnav.org
+ + Atlas download can be paused/resumed interactively  
+ + Proxy settings rewritten - now system/Java wide or application settings can be  
+    used alternatively to the user defined proxy
+ + New regional map sources (Poland): ump.waw.pl and docelu.pl
+ + Map sources can now be disabled which hides them from the list
+ + Merging different layers via drag & drop
+ + Custom map sources can be defined via settings.xml (see README.HTM)
+ + Map sources manual online update via settings dialog
+ + New atlas format: OziExplorer / large PNG export
+
+ ~ Java requirement has changed: Now at least Java 1.6 is required! 
+ ~ Profile saving updated to new atlas structure
+ ~ Fullscreen mode is currently unavailable
+ ~ Google Maps, Earth, Mapmaker, Maps China url updated
+ ~ Settings.xml format has changed
+ ~ Max zoom for Cycloatlas changed from 14 to 15
+ ~ Removed OpenArialMap map source 
+ ~ Panels on the left can be collapsed to save space
+
+ ! Editing the atlas content while map creation in progress resulted in
+    unusable/abnormal atlases (see bug #2819613)
+ 
+ 1.1: (2009-05-13)
+ + New output format: JPEG with different quality levels
+ + added map source Microsoft Maps China (Ditu)
+ 
+ ~ Fixed url and name of Cykloatlas (fixes also bug #2755108)
+ ~ Updated url of Google Map Maker & Earth
+ ~ Fixed tar creation which had problems with default charset on some systems  
+ ~ Changed the color depth selector to an output format selector 
+ ~ OSM Hiking map moved to new server - url adapted
+ 
+ ! "Open atlas folder" does now work on Linux (Gnome and may be Kde)
+
+ 1.0: (2009-04-10)
+ 
+ + Reload current map view by pressing "F5"
+ + First experimental implementation of color reducing implemented (requires
+    additional library "Java Advanced Imaging": https://jai.dev.java.net/binary-builds.html
+    Download the library and place the Jar[s] in the same directory as TrekBuddyAtlasCreator
+ + Experimental: Color reduced (<16) png files are saved using an own implementation
+    that writes real 4 bit PNG files (instead to the default Java one that only creates
+    8 bit or true color files)    
+ + added map source OSM hiking: http://opentiles.com/nop/    
+ + added map source OpenArialMap    
+
+ ~ Maximum map size reduced to 32767 (1 pixel less)
+ ~ Atlas output format can now be specified: Tared or untared atlas. The created atlas 
+    is always created in the folder "atlases" - the folder "atlasestared" is no longer used.
+ ~ "ozi" / "tac_tmp" directory no longer used. Instead one temporary tar file per map 
+    layer is created (and later deleted) in the default system temp directory
+ ~ fixed GoogleMapMaker map source
+
+ ! Loading tile store information in settings dialog blocked GUI
+
+ 0.9.7: (2009-03-05)
+ 
+ + New map sources (full support): Microsoft Maps, Earth, Hybrid, 
+    Cycloatlas (Czech Republic only)
+ + New map sources (partial support): Multimap.com
+ + Window position, size and state (maximized or not) is saved
+ + Preview map allows zoom move/zoom via keyboard controls (patch by Martin Loetzsch)
+ + Fullscreen mode hides left panel and places control inside the preview map 
+    (patch by Martin Loetzsch)
+
+ ~ Google Maps, Earth & MapsChina urls updated
+ ~ Custom tile size selection controls combined  
+ ~ Fixed several Swing thread safety problems (patch by Martin Loetzsch)  
+
+ 0.9.6: (2009-01-08)
+ 
+ + New map source: Google Terrain
+ + Download error counter added to atlas progress dialog
+ ! Updated OpenCycleMap url (fixes zoom level > 13)
+ + New map source: Yahoo Maps
+ + New map source: Google Maps China (Ditu)
+ + New map source (Germany only): Outdooractive.com
+ + Selected/entered tile size is now saved/restored in/from settings.xml  
+ + Tooltip of "tiles-to-download-counter-label" (located right to the label 
+    "Zoom levels (..)") now shows the breakdown of the number of tiles
+    to the different zoom levels including the area calculation   
+ ~ Exceptions that occur while downloading/creating an atlas are now displayed
+    in an dialog showing detailed information about the system and the exception
+ ~ Updated Google Maps url & removed "Galileo" appendix
+ ~ New experimental implementation for creating tile of custom size. 
+    Disdvantage: Much slower that the algorithm before
+    Advantage: Only constant memory needed (approx. less than 10 MB)   
+ ~ Using custom tile size now does not concert the tiles to png format. 
+    Instead the format used by the maps source is used.
+
+ 0.9.5: (2008-10-27)
+
+ + Detailed log files can be created by providing a configuration file log4j.xml
+     (see README.txt for details).
+ + HTTP Proxy (host & port) can be specified via GUI
+ + Added information about amount of tiles and total size for each tile source store 
+    in Settings window.
+ + Multithreaded download of tiles implemented (number of parallel download threads
+    changeable via settings dialog
+ ~ Tile download system now reuses HTTP connections for HTTP 1.1 servers instead of 
+    opening a new TCP connection for each tile  
+ ! Selection of whole world resulted in a wrong max longitude (-180 instead of 180)
+ ! Tile number and index calculations near to the border of the world corrected 
+ ! Saving profiles works now (including map source, zoom levels and tile size) 
+ ! Aborting of stalled downloads works now as expected
+ 
+ 0.9.1: (2008-10-17)
+
+ ! Fixed wrong calculation of number of tiles when the amount was large. 
+ 
+ 0.9 alpha: (2008-10-15)
+ + Added resizeable GUI
+ + Added possibility to select map area by selection an area with mouse
+ + Added tmi files for the tared atlases which make the  map loading faster
+ 
+ ~ Changed preview viewer to JMapViewer. It has several advantages:
+    different map sources 
+    preview loads in background automatically
+    easy zooming (mouse wheel) and movement (right mouse button)
+ ~ Tar generation rewritten, each tar is now only opened one time, not 
+   once for each tile to be added (increases tar creation in case of a virus 
+   scanner being active)
+ 
+ 0.8:
+ + Added xml based settings file via Java Properties
+ + Added possibility to change tile size for the downloaded tiles.
+ + Added possibility to set map size in atlas. Giving the possibility to create 
+    large atlases 
+  
+ ! Fixed the non working setting tile store enabled. It was always enabled, 
+    despite of what was written in the settings file
+ ! Fixed (hopefully) the generation of mixed up atlases at some Linux operating 
+    system(s).
+ ! Fixed bugs related to defect profiles in profiles.xml file by adding some 
+    validation of the xml data at application start.
+  
+0.7:
+ + Added possibility to abort an ongoing download of Atlas
+ + Added label that shows how many tiles that will be downloaded with current 
+    lat, long & zoom settings 
+ + Added persistent tile store (cache of tiles in a store which is persistent 
+    between program sessions) 
+
+ ! Fixed wrong download link to ditu.google.com
+ 
+  0.61:
+ + Added a possibility to select to download tiles from either ditu.google.com 
+    or maps.google.com
+  
+ ! Fixed hard coded look and feel, which resulted in an 
+    javax.swing.UnsupportedLookAndFeelException at other environments then Windows
+ 
+ 
+     
+ 

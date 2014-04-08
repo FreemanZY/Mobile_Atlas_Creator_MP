@@ -1,0 +1,22 @@
+*******************************************************************************
+*                 M O B I L E   A T L A S   C R E A T O R                     * 
+*******************************************************************************
+*                        R E L E A S E   N O T E S                            *
+*******************************************************************************
+
+
+ Upgrading from version prior to 1.7:
+ 
+ Starting with MOBAC v1.7 the tile store format has changed. MOBAC now uses a 
+ database (BerkelyDB) based tile store instead of saving each image files 
+ separately in the file system. 
+ 
+ Existing tile stores are NOT CONVERTED into the new database format because 
+ the files in the file system are missing relevant information. Existing old
+ tile stores are ignored.
+ 
+ Therefore it is recommended to install MOBAC into a clean directory. 
+ Existing atlas profiles (tac-profile*.xml) created with versions prior to v1.7 
+ can usually can be reused by copying them into the current directory of MOBAC.
+ Upon next start of MOBAC they will be automatically renamed and will be 
+ available from the atlas profile selector.     
