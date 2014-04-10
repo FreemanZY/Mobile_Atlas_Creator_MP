@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<customMapSource>
+	<name>高德地图</name>
+	<minZoom>0</minZoom>
+	<maxZoom>18</maxZoom>
+	<tileType>PNG</tileType>
+	<tileUpdate>None</tileUpdate>
+	<url><![CDATA[http://emap{$serverpart}.is.autonavi.com/appmaptile?&x={$x}&y={$y}&z={$z}]]></url>
+	<serverParts>0 1 2 3</serverParts>
+</customMapSource>

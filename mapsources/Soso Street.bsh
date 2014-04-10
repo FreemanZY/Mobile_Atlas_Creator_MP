@@ -1,0 +1,16 @@
+//Soso Map
+String getTileUrl( int zoom, int x, int y ) {
+    y = (1<<zoom) -1 - y;
+    int q = (y%10) % 4;  //same result but different logic vs JS
+    int dx = Math.floor(x/16);
+    int dy = Math.floor(y/16);
+    return "http://p"+q+".map.soso.com/maptilesv2/"+zoom+"/"+dx+"/"+dy+"/"+x+"_"+y+".png";
+} 
+
+tileType = "png"; // required - image format "png" "jpg" or "gif"
+name = "Soso 道路地图";
+tileSize = 256; // optional
+minZoom = 1;    // optional
+maxZoom = 18;   // optional
+tileUpdate = TileUpdate.None; // TileUpdate.IfNoneMatch, TileUpdate.ETag, TileUpdate.IfModifiedSince, TileUpdate.LastModified, TileUpdate.None 
+//backgroundColor = "#E5E3DF"; // optional - supported since MOBAC 1.9.1

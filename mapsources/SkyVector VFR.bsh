@@ -1,0 +1,11 @@
+//SkyVector VFR
+String getTileUrl( int zoom, int x, int y ) {
+  baseUrl = "http://skyvector.com/tiles/301/1305";
+  return baseUrl + "/" + (22 - 2*zoom) + "/" + x + "/" + y + ".jpg";    
+}
+name = "SkyVector VFR";
+minZoom = 1;
+maxZoom = 10;
+tileType = "jpg";
+tileUpdate = TileUpdate.IfModifiedSince;
+

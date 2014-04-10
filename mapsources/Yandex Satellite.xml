@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<customMapSource>
+	<name>Yandex Satellite</name>
+	<minZoom>0</minZoom>
+	<maxZoom>13</maxZoom>
+	<tileType>PNG</tileType>
+	<tileUpdate>None</tileUpdate>
+	<url><![CDATA[http://sat0{$serverpart}.maps.yandex.net/tiles?l=sat&v=3.35.0&x={$x}&y={$y}&z={$z}&lang=en_US]]></url>
+	<serverParts>0 1 2 3 4</serverParts>
+</customMapSource>
