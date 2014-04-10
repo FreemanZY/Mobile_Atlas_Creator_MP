@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<customMapSource>
-    <name>Open Cycle Map</name>
-    <minZoom>1</minZoom>
-    <maxZoom>18</maxZoom>
-    <tileType>PNG</tileType>
-    <tileUpdate>None</tileUpdate>
-    <url>http://tile.opencyclemap.org/cycle/{$z}/{$x}/{$y}.png</url>
-</customMapSource>

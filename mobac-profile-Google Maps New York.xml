@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="Unnamed atlas" outputFormat="TaredAtlas">
+    <Layer name="GM New York">
+        <Map maxTileCoordinate="4954111/6318591" minTileCoordinate="4933120/6291712" mapSource="Google Maps" zoom="16" name="GM New York 16"/>
+        <Map maxTileCoordinate="1238527/1579775" minTileCoordinate="1233152/1572864" mapSource="Google Maps" zoom="14" name="GM New York 14"/>
+    </Layer>
+</atlas>
