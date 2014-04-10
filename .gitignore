@@ -1,6 +1,7 @@
 # Atlases #
 ###################
 *.sqlitedb
+*.sqlitedb-journal
 *.lck
 
 # tilestore #
