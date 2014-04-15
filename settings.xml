@@ -5,7 +5,7 @@
     </atlasFormatSpecificSettings>
     <bandwidthLimit>0</bandwidthLimit>
     <coordinateNumberFormat>DEG_LOCAL</coordinateNumberFormat>
-    <customProxyHost>10.108.39.250</customProxyHost>
+    <customProxyHost>127.0.0.1</customProxyHost>
     <customProxyPassword></customProxyPassword>
     <customProxyPort>16808</customProxyPort>
     <customProxyUserName></customProxyUserName>
@@ -95,7 +95,7 @@
     <MapSourcesUpdate/>
     <mapviewCenterCoordinate lat="34.97753994555904" lon="133.77254605293274"/>
     <mapviewGridZoom>-1</mapviewGridZoom>
-    <mapviewMapSource>Yahoo Japan Map</mapviewMapSource>
+    <mapviewMapSource>Google 卫星地图</mapviewMapSource>
     <mapviewSelectionMax>900775936/440713216</mapviewSelectionMax>
     <mapviewSelectionMin>897105920/436387840</mapviewSelectionMin>
     <mapviewZoom>17</mapviewZoom>
@@ -139,10 +139,10 @@
         <zoomLevel>16</zoomLevel>
         <zoomLevel>17</zoomLevel>
     </selectedZoomLevels>
-    <tileDefaultExpirationTime>2615100919</tileDefaultExpirationTime>
+    <tileDefaultExpirationTime>2644276155</tileDefaultExpirationTime>
     <tileImageFormat>PNG</tileImageFormat>
-    <tileMaxExpirationTime>34520671809</tileMaxExpirationTime>
-    <tileMinExpirationTime>462408597</tileMinExpirationTime>
+    <tileMaxExpirationTime>35002576724</tileMaxExpirationTime>
+    <tileMinExpirationTime>466927666</tileMinExpirationTime>
     <tileSize>256/256</tileSize>
     <tileStoreEnabled>true</tileStoreEnabled>
     <unitSystem>Metric</unitSystem>
