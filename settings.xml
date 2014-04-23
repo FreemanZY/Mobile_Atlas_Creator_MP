@@ -5,7 +5,7 @@
     </atlasFormatSpecificSettings>
     <bandwidthLimit>0</bandwidthLimit>
     <coordinateNumberFormat>DEG_LOCAL</coordinateNumberFormat>
-    <customProxyHost>10.108.39.250</customProxyHost>
+    <customProxyHost>127.0.0.1</customProxyHost>
     <customProxyPassword></customProxyPassword>
     <customProxyPort>16808</customProxyPort>
     <customProxyUserName></customProxyUserName>
@@ -14,7 +14,7 @@
     <directories/>
     <downloadRetryCount>1</downloadRetryCount>
     <downloadThreadCount>2</downloadThreadCount>
-    <elementName>Shanghai Map HD</elementName>
+    <elementName>Shanghai Map Part 3</elementName>
     <googleLanguage>en</googleLanguage>
     <gpxFileChooserDir></gpxFileChooserDir>
     <httpConnectionTimeout>10</httpConnectionTimeout>
@@ -93,12 +93,12 @@
         <mapSource>Yahoo Japan Map</mapSource>
     </mapSourcesEnabled>
     <MapSourcesUpdate/>
-    <mapviewCenterCoordinate lat="34.97753994555904" lon="133.77254605293274"/>
+    <mapviewCenterCoordinate lat="31.25976998739429" lon="121.3714599609375"/>
     <mapviewGridZoom>-1</mapviewGridZoom>
-    <mapviewMapSource>Yahoo Japan Map</mapviewMapSource>
-    <mapviewSelectionMax>900775936/440713216</mapviewSelectionMax>
-    <mapviewSelectionMin>897105920/436387840</mapviewSelectionMin>
-    <mapviewZoom>17</mapviewZoom>
+    <mapviewMapSource>Google 道路地图</mapviewMapSource>
+    <mapviewSelectionMax>900849664/440713216</mapviewSelectionMax>
+    <mapviewSelectionMin>897064960/439558144</mapviewSelectionMin>
+    <mapviewZoom>9</mapviewZoom>
     <maxMapSize>65536</maxMapSize>
     <osmHikingTicket></osmHikingTicket>
     <paperAtlas>
@@ -120,29 +120,12 @@
     <placeBookmarks/>
     <proxyType>CUSTOM</proxyType>
     <selectedZoomLevels>
-        <zoomLevel>0</zoomLevel>
-        <zoomLevel>1</zoomLevel>
-        <zoomLevel>2</zoomLevel>
-        <zoomLevel>3</zoomLevel>
-        <zoomLevel>4</zoomLevel>
-        <zoomLevel>5</zoomLevel>
-        <zoomLevel>6</zoomLevel>
-        <zoomLevel>7</zoomLevel>
-        <zoomLevel>8</zoomLevel>
-        <zoomLevel>9</zoomLevel>
-        <zoomLevel>10</zoomLevel>
-        <zoomLevel>11</zoomLevel>
-        <zoomLevel>12</zoomLevel>
-        <zoomLevel>13</zoomLevel>
-        <zoomLevel>14</zoomLevel>
-        <zoomLevel>15</zoomLevel>
-        <zoomLevel>16</zoomLevel>
-        <zoomLevel>17</zoomLevel>
+        <zoomLevel>18</zoomLevel>
     </selectedZoomLevels>
-    <tileDefaultExpirationTime>2615100919</tileDefaultExpirationTime>
+    <tileDefaultExpirationTime>2629648092</tileDefaultExpirationTime>
     <tileImageFormat>PNG</tileImageFormat>
-    <tileMaxExpirationTime>34520671809</tileMaxExpirationTime>
-    <tileMinExpirationTime>462408597</tileMinExpirationTime>
+    <tileMaxExpirationTime>34760789193</tileMaxExpirationTime>
+    <tileMinExpirationTime>464662650</tileMinExpirationTime>
     <tileSize>256/256</tileSize>
     <tileStoreEnabled>true</tileStoreEnabled>
     <unitSystem>Metric</unitSystem>
