@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<atlas version="1" name="Shanghai Google Map Part 1" outputFormat="RMaps">
+    <Layer name="Shanghai Google Map Part 1">
+        <Map maxTileCoordinate="255/255" minTileCoordinate="0/0" mapSource="Google 道路地图" zoom="0" name="Shanghai Google Map Part 1 00"/>
+        <Map maxTileCoordinate="511/255" minTileCoordinate="256/0" mapSource="Google 道路地图" zoom="1" name="Shanghai Google Map Part 1 01"/>
+        <Map maxTileCoordinate="1023/511" minTileCoordinate="768/256" mapSource="Google 道路地图" zoom="2" name="Shanghai Google Map Part 1 02"/>
+        <Map maxTileCoordinate="1791/1023" minTileCoordinate="1536/768" mapSource="Google 道路地图" zoom="3" name="Shanghai Google Map Part 1 03"/>
+        <Map maxTileCoordinate="3583/1791" minTileCoordinate="3328/1536" mapSource="Google 道路地图" zoom="4" name="Shanghai Google Map Part 1 04"/>
+        <Map maxTileCoordinate="6911/3583" minTileCoordinate="6656/3328" mapSource="Google 道路地图" zoom="5" name="Shanghai Google Map Part 1 05"/>
+        <Map maxTileCoordinate="13823/6911" minTileCoordinate="13568/6656" mapSource="Google 道路地图" zoom="6" name="Shanghai Google Map Part 1 06"/>
+        <Map maxTileCoordinate="27647/13567" minTileCoordinate="27136/13312" mapSource="Google 道路地图" zoom="7" name="Shanghai Google Map Part 1 07"/>
+        <Map maxTileCoordinate="55039/26879" minTileCoordinate="54528/26624" mapSource="Google 道路地图" zoom="8" name="Shanghai Google Map Part 1 08"/>
+        <Map maxTileCoordinate="110079/53759" minTileCoordinate="109312/53248" mapSource="Google 道路地图" zoom="9" name="Shanghai Google Map Part 1 09"/>
+        <Map maxTileCoordinate="220159/107263" minTileCoordinate="218880/106752" mapSource="Google 道路地图" zoom="10" name="Shanghai Google Map Part 1 10"/>
+        <Map maxTileCoordinate="440063/214527" minTileCoordinate="437760/213504" mapSource="Google 道路地图" zoom="11" name="Shanghai Google Map Part 1 11"/>
+        <Map maxTileCoordinate="879871/428799" minTileCoordinate="875776/427264" mapSource="Google 道路地图" zoom="12" name="Shanghai Google Map Part 1 12"/>
+        <Map maxTileCoordinate="1759743/857599" minTileCoordinate="1751552/854528" mapSource="Google 道路地图" zoom="13" name="Shanghai Google Map Part 1 13"/>
+        <Map maxTileCoordinate="3519231/1714943" minTileCoordinate="3503360/1709312" mapSource="Google 道路地图" zoom="14" name="Shanghai Google Map Part 1 14"/>
+        <Map maxTileCoordinate="7038463/3429887" minTileCoordinate="7006976/3418624" mapSource="Google 道路地图" zoom="15" name="Shanghai Google Map Part 1 15"/>
+        <Map maxTileCoordinate="14076927/6859519" minTileCoordinate="14013952/6837504" mapSource="Google 道路地图" zoom="16" name="Shanghai Google Map Part 1 16"/>
+        <Map maxTileCoordinate="28093695/13718782" minTileCoordinate="28028160/13675008" mapSource="Google 道路地图" zoom="17" name="Shanghai Google Map Part 1 17 (0)"/>
+        <Map maxTileCoordinate="28153854/13718782" minTileCoordinate="28093696/13675008" mapSource="Google 道路地图" zoom="17" name="Shanghai Google Map Part 1 17 (1)"/>
+        <Map maxTileCoordinate="56121855/27415551" minTileCoordinate="56056320/27350016" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (0)"/>
+        <Map maxTileCoordinate="56121855/27437310" minTileCoordinate="56056320/27415552" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (1)"/>
+        <Map maxTileCoordinate="56187391/27415551" minTileCoordinate="56121856/27350016" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (2)"/>
+        <Map maxTileCoordinate="56187391/27437310" minTileCoordinate="56121856/27415552" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (3)"/>
+        <Map maxTileCoordinate="56252927/27415551" minTileCoordinate="56187392/27350016" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (4)"/>
+        <Map maxTileCoordinate="56252927/27437310" minTileCoordinate="56187392/27415552" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (5)"/>
+        <Map maxTileCoordinate="56307454/27415551" minTileCoordinate="56252928/27350016" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (6)"/>
+        <Map maxTileCoordinate="56307454/27437310" minTileCoordinate="56252928/27415552" mapSource="Google 道路地图" zoom="18" name="Shanghai Google Map Part 1 18 (7)"/>
+    </Layer>
+</atlas>
