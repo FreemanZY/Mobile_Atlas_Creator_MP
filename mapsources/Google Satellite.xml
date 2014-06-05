@@ -3,8 +3,8 @@
     <name>Google Satellite Map</name>
     <minZoom>0</minZoom>
     <maxZoom>20</maxZoom>
-    <tileType>PNG</tileType>
+    <tileType>JPG</tileType>
     <tileUpdate>None</tileUpdate>
-    <url><![CDATA[http://mt{$serverpart}.google.com/vt/lyrs=s@125&src=app&x={$x}&y={$y}&z={$z}&s=Galileo]]></url>
+    <url><![CDATA[https://khms{$serverpart}.google.com/kh/v=150&x={$x}&y={$y}&z={$z}]]></url>
     <serverParts>0 1 2 3</serverParts>
 </customMapSource>
